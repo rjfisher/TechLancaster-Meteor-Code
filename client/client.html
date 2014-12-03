@@ -1,0 +1,25 @@
+<head>
+  <title>Tech Lancaster Chap App</title>
+</head>
+
+<body>
+  {{> loginButtons align="right"}}<br>
+  <h1>Tech Lancaster Chat App</h1>
+  {{>welcome}}
+  {{>input}}
+  {{>messages}}
+</body>
+
+<template name="welcome">
+  <p>Welcome to the <a href="http://www.twitter.com/TechLancaster">@TechLancaster</a> chat app!  Please log in to contribute</p>
+</template>
+
+<template name="messages">
+  {{#each messages}}
+    <strong>{{name}}:</strong> {{message}}<br>
+  {{/each}}
+</template>
+
+<template name="input">
+  <p>Message: <input type="text" id="message"></p>
+</template>
